@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav'
 import { ThemeContext } from './ThemeContext'
+import Main from './components/Main';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <>
       <ThemeContext.Provider value={{theme, setTheme}}>
         <Nav></Nav>
+        <Main></Main>
       </ThemeContext.Provider>
     </>
   )

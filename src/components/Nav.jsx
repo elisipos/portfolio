@@ -30,7 +30,7 @@ const Nav = () => {
   return (
     <>
     <div className={theme == "light" ? 'text-gray-200 bg-lime-500' : 'text-gray-800 bg-lime-400'}>
-      <div className={'flex justify-end p-5 w-11/12'}>
+      <div className={'flex justify-end p-5 w-10/12'}>
         <div className='text-xl px-5 hover:cursor-pointer enlarge' onClick={() => handleClick()} onMouseOver={() => handleMouseEnter()} onMouseOut={() => handleMouseOut()}>{text}</div>
         <div className='text-xl px-5 hover:cursor-pointer enlarge'>blogs</div>
         <div className='text-xl px-5 hover:cursor-pointer enlarge'>projects</div>
