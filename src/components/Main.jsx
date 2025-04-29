@@ -1,9 +1,13 @@
 import React from 'react'
 import ProfileComp from './ProfileComp'
+import TechStackComp from './TechStackComp'
 
 const Main = () => {
   return (
-    <ProfileComp></ProfileComp>
+    <>
+      <ProfileComp></ProfileComp>
+      <TechStackComp></TechStackComp>
+    </>
   )
 }
 
