@@ -7,7 +7,7 @@ const ProfileComp = () => {
   const {theme, setTheme} = useContext(ThemeContext);
 
   return (
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center mt-10">
 
       <div className={`${theme == 'light' ? 'bg-black/5': 'bg-white/10'} flex p-5 rounded-2xl`}>
       
