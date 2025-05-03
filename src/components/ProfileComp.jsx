@@ -12,12 +12,12 @@ const ProfileComp = () => {
       <div className={`${theme == 'light' ? 'bg-black/5': 'bg-white/10'} flex p-5 rounded-2xl`}>
       
         <div className="flex items-center">
-          <div className={`${theme == 'light' ? 'border-black' : 'border-gray-200'} lg:w-25 lg:h-25 w-30 h-30 rounded-full overflow-hidden border-2`}>
+          <div className={`${theme == 'light' ? 'border-black' : 'border-gray-300'} lg:w-25 lg:h-25 w-30 h-30 rounded-full overflow-hidden border-2`}>
             <img src={profileImg} alt="Picture of Eli Sipos"/>
           </div>
         </div>
         
-        <div className={`${theme == 'light' ? 'text-black' : 'text-gray-200'} flex items-center mt-5`}>
+        <div className={`${theme == 'light' ? 'text-black' : 'text-gray-300'} flex items-center mt-5`}>
           <div>
             <div className="text-3xl mx-1 lg:mx-5 flex">Hi, I'm Eli Sipos.</div>
 
