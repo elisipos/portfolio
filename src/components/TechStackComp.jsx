@@ -12,7 +12,6 @@ const TechStackComp = () => {
 
   const handleSearchInput = (data) => {
     setInputFromSearch(data)
-    console.log(data)
   }
 
   return (
