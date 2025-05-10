@@ -16,6 +16,11 @@ const Nav = () => {
   useEffect(() => {
     setText(theme + " theme");
     setPrev(theme + " theme");
+
+    let userTheme = localStorage.getItem("theme");
+    if(userTheme){
+      localStorage.setItem("theme", theme);
+    }
   }, [theme]);
 
   const handleMouseEnter = () => {
