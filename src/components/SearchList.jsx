@@ -270,11 +270,7 @@ const SearchList = ( { input }) => {
   const [displayList, setDisplayList] = useState(techStackArr);
 
   const filterList = (filter) => {
-    if(filter !== ''){
-      return techStackArr.filter(e => e.id.toLowerCase().includes(filter.toLowerCase()));
-    }else{
-      return techStackArr;
-    }
+    return filter !== '' ? techStackArr.filter(e => e.id.toLowerCase().includes(filter.toLowerCase())) : techStackArr;
   }
 
   useEffect(() => {
@@ -283,14 +279,18 @@ const SearchList = ( { input }) => {
 
   return (
     <>
-      {displayList.map(item => (
+    {displayList.length !== 0 ? (
+      displayList.map(item => (
         <SearchListElem 
           key={item.id}
           id={item.id}
           detail={item.detail}
           svg={item.svg}
         />
-      ))}
+      ))
+    ) : (
+      <div className="text-black/60 text-lg mt-5"> Unfamilar with the search term!</div>
+    )}
     </>
   )
 }

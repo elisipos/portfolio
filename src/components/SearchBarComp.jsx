@@ -17,7 +17,7 @@ const SearchBarComp = ({ sendParentData }) => {
       placeholder='Search languages, frameworks, libraries, etc...'
       className={`${
         theme == 'light' ? 'border-black placeholder-gray-600 text-black' : 'border-gray-400 placeholder-gray-400 text-gray-400'
-      } focus:outline-1 border-1 rounded-lg w-xs lg:w-lg p-2 lg:text-lg text-sm mt-2`}/>
+      } focus:outline-1 border-1 rounded-lg w-xs lg:w-lg p-2 lg:text-lg text-sm my-2`}/>
   )
 }
 
