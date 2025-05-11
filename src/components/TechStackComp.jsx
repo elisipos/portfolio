@@ -4,6 +4,7 @@ import SearchBarComp from './SearchBarComp';
 import SearchListElem from './SearchListElem';
 import { AnimatePresence, motion } from 'motion/react'
 import SearchList from './SearchList';
+import SearchListHeader from './SearchListHeader';
 
 const TechStackComp = () => {
 
@@ -16,12 +17,13 @@ const TechStackComp = () => {
 
   return (
     <div className="flex justify-center mt-5 w-4/5 lg:w-1/2 mx-auto">
-      <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex pt-2 p-4 rounded-2xl text-xl text-center max-h-[75vh]`}>
+      <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex pt-2 p-4 rounded-2xl text-xl text-center max-h-[70vh]`}>
         <div className="">
-          <div className={`${theme == 'light' ? 'text-black' : 'text-gray-300'}`}>Tech Stack</div>
+          <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'}`}>Tech Stack</div>
           <SearchBarComp sendParentData={handleSearchInput}></SearchBarComp>
 
-          <ul className="grid grid-cols-1 max-h-[60vh] overflow-y-scroll overflow-x-hidden">
+          <SearchListHeader></SearchListHeader>
+          <ul className="grid grid-cols-1 max-h-[55vh] overflow-y-scroll overflow-x-hidden">
             <SearchList input={inputFromSearch}></SearchList>
           </ul>
 

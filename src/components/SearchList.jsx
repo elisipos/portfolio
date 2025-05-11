@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import SearchListElem from './SearchListElem';
 import { ThemeContext } from '../ThemeContext';
 import { AnimatePresence } from 'motion/react';
+import { li } from 'motion/react-client';
 
 const SearchList = ( { input }) => {
   
@@ -286,16 +287,18 @@ const SearchList = ( { input }) => {
   return (
     <>
     {displayList.length !== 0 ? (
-      displayList.map(item => (
-        <SearchListElem 
-          key={item.id}
-          id={item.id}
-          detail={item.detail}
-          svg={item.svg}
-        />
-      ))
+        displayList.map(item => (
+          <SearchListElem 
+            key={item.id}
+            id={item.id}
+            detail={item.detail}
+            svg={item.svg}
+          />
+        ))
     ) : (
-      <div className="text-black/60 text-lg mt-5"> Unfamilar with the search term!</div>
+      <div className={`${theme == 'light' ? 'text-black/60' : 'text-white/80'} text-lg my-2`}>
+        Cannot find the search term!<br/>
+        I am either unfamiliar with the search term or it is spelled wrong.</div>
     )}
     </>
   )
