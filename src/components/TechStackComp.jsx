@@ -16,15 +16,17 @@ const TechStackComp = () => {
 
   return (
     <div className="flex justify-center mt-5 w-4/5 lg:w-1/2 mx-auto">
-      <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex pt-2 p-5 rounded-2xl text-xl text-center`}>
-        <div>
+      <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex pt-2 p-5 rounded-2xl text-xl text-center max-h-[75vh]`}>
+        <div className="">
           <div className={`${theme == 'light' ? 'text-black' : 'text-gray-300'}`}>Tech Stack</div>
           <SearchBarComp sendParentData={handleSearchInput}></SearchBarComp>
-          <ul className="grid grid-cols-1">
+
+          <ul className="grid grid-cols-1 max-h-[60vh] overflow-scroll">
             <AnimatePresence>
-              <SearchList input={inputFromSearch} className=""></SearchList>
+              <SearchList input={inputFromSearch}></SearchList>
             </AnimatePresence>
           </ul>
+
         </div>
       </div>
     </div>
