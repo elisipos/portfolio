@@ -22,9 +22,7 @@ const TechStackComp = () => {
           <SearchBarComp sendParentData={handleSearchInput}></SearchBarComp>
 
           <ul className="grid grid-cols-1 max-h-[60vh] overflow-y-scroll overflow-x-hidden">
-            <AnimatePresence>
-              <SearchList input={inputFromSearch}></SearchList>
-            </AnimatePresence>
+            <SearchList input={inputFromSearch}></SearchList>
           </ul>
 
         </div>
