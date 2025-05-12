@@ -23,7 +23,7 @@ const TechStackComp = () => {
           <SearchBarComp sendParentData={handleSearchInput}></SearchBarComp>
 
           <SearchListHeader></SearchListHeader>
-          <ul className="grid grid-cols-1 max-h-[55vh] overflow-y-scroll overflow-x-hidden">
+          <ul className={`${theme == 'light' ? 'custom-scrollbar-light' : 'custom-scrollbar-dark'} grid grid-cols-1 max-h-[55vh] overflow-y-scroll overflow-x-hidden custom-scrollbar-dark`}>
             <SearchList input={inputFromSearch}></SearchList>
           </ul>
 

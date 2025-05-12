@@ -1,13 +1,13 @@
 @import "tailwindcss";
-
+@plugin "tailwind-scrollbar";
 html {
   transition: 0.2s linear;
 }
 
-.enlarge {
-  transition: transform 0.2s ease-in-out;
+.custom-scrollbar-dark {
+  scrollbar-color: color-mix(in oklab, var(--color-white) /* #fff = #ffffff */ 80%, transparent) transparent
 }
 
-.enlarge:hover {
-  transform: scale(1.1);
+.custom-scrollbar-light {
+  scrollbar-color: color-mix(in oklab, var(--color-black) /* #000 = #000000 */ 60%, transparent) transparent
 }
