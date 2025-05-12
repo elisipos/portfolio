@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { AnimatePresence, motion, rgba } from 'motion/react'
-import { ThemeContext } from '../ThemeContext'
+import { ThemeContext } from '../../ThemeContext'
 
 const SearchListElem = (prop) => {
 

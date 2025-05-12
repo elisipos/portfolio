@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import SearchListElem from './SearchListElem';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../ThemeContext';
 import { AnimatePresence } from 'motion/react';
 import { li } from 'motion/react-client';
 

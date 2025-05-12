@@ -1,10 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../ThemeContext'
-import SearchBarComp from './SearchBarComp';
-import SearchListElem from './SearchListElem';
-import { AnimatePresence, motion } from 'motion/react'
-import SearchList from './SearchList';
-import SearchListHeader from './SearchListHeader';
+import SearchBarComp from './Search/SearchBarComp';
+import SearchList from './Search/SearchList';
+import SearchListHeader from './Search/SearchListHeader';
 
 const TechStackComp = () => {
 

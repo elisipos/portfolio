@@ -4,10 +4,18 @@ html {
   transition: 0.2s linear;
 }
 
+.enlarge {
+  transition: transform 0.1s ease;
+}
+
+.enlarge:hover {
+  transform: scale(1.05);
+}
+
 .custom-scrollbar-dark {
-  scrollbar-color: color-mix(in oklab, var(--color-white) /* #fff = #ffffff */ 80%, transparent) transparent
+  scrollbar-color: color-mix(in oklab, var(--color-white) 80%, transparent) transparent
 }
 
 .custom-scrollbar-light {
-  scrollbar-color: color-mix(in oklab, var(--color-black) /* #000 = #000000 */ 60%, transparent) transparent
+  scrollbar-color: color-mix(in oklab, var(--color-black) 60%, transparent) transparent
 }

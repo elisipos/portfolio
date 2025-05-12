@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { ThemeContext } from '../ThemeContext'
+import { ThemeContext } from '../../ThemeContext'
 
 const SearchBarComp = ({ sendParentData }) => {
 
