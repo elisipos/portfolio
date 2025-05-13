@@ -11,17 +11,16 @@ const Nav = () => {
 
   const handleClick = () => {
     theme == 'light' ? setTheme('dark') : setTheme('light');
+    if(theme === 'light'){
+      setTheme('dark');
+      localStorage.setItem("theme", 'dark');
+    }else{
+      setTheme('light');
+      localStorage.setItem("theme", 'light')
+    }
   }
 
   useEffect(() => {
-    let userTheme = localStorage.getItem("theme");
-    if(!userTheme){
-      console.log("here");
-      setTheme('light');
-    }
-    localStorage.setItem("theme", userTheme);
-    console.log(theme);
-
     setText(theme + " theme");
     setPrev(theme + " theme");
   }, [theme]);

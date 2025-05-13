@@ -7,9 +7,9 @@ import AboutMe from './AboutMe'
 const Main = () => {
 
   const {theme, setTheme} = useContext(ThemeContext);
-  let userTheme = localStorage.getItem("theme");
+  
   useEffect(() => {
-    setTheme(userTheme);
+    setTheme("light");
   }, [])
 
   return (
