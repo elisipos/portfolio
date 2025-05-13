@@ -23,3 +23,8 @@ html {
 .custom-scrollbar-light {
   scrollbar-color: color-mix(in oklab, var(--color-black) 60%, transparent) transparent
 }
+
+.highlight {
+  box-shadow: 0 0 0 2.4px color-mix(in oklab, var(--color-lime-500) 70%, transparent);
+  background-color: color-mix(in oklab, var(--color-lime-500) 70%, transparent);
+}
