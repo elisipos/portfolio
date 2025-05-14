@@ -1,16 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { ThemeContext } from '../ThemeContext'
+import HighlightSpanComp from './HighlightSpanComp';
 
 const AboutMe = () => {
 
   const {theme, setTheme} = useContext(ThemeContext);
   const [highlight, setHighlight] = useState(false);
-
-  const HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE = "0 0 0 2.4px rgba(124, 207, 0, 0.7)";
-  const HIGHLIGHT_TRANSITION_BOX_SHADOW = "0 0 0 2.4px rgba(124, 207, 0, 0)";
-  const HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE = "rgba(124, 207, 0, 0.7)";
-  const HIGHLIGHT_TRANSITION_BACKGROUND_COLOR = "rgba(124, 207, 0, 0)";
 
   return (
     <div 
@@ -21,29 +17,11 @@ const AboutMe = () => {
           <div className="my-1">About Me</div>
           <div className="pre text-left text-lg block">
             {`\tI am a `}
-            <motion.span
-            key="highlight-1"
-            style={ { originX: 0} }
-            animate={{ 
-              boxShadow: highlight ? HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE : HIGHLIGHT_TRANSITION_BOX_SHADOW, 
-              backgroundColor: highlight ? HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE : HIGHLIGHT_TRANSITION_BACKGROUND_COLOR }}
-            transition={ { duration: 0.2 } }>full-stack developer</motion.span>
+            <HighlightSpanComp highlight={highlight}>full-stack developer</HighlightSpanComp>
             {` based in Wisconsin holding an Associate's in `}
-            <motion.span
-            key="highlight-2"
-            style={ { originX: 0} }
-            animate={{ 
-              boxShadow: highlight ? HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE : HIGHLIGHT_TRANSITION_BOX_SHADOW, 
-              backgroundColor: highlight ? HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE : HIGHLIGHT_TRANSITION_BACKGROUND_COLOR }}
-            transition={ { duration: 0.2 } }>Web and Software Development.</motion.span>
+            <HighlightSpanComp highlight={highlight}>Web and Software Development</HighlightSpanComp>
             {` I'm most experienced with building `}
-            <motion.span
-            key="highlight-3"
-            style={ { originX: 0} }
-            animate={{ 
-              boxShadow: highlight ? HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE : HIGHLIGHT_TRANSITION_BOX_SHADOW, 
-              backgroundColor: highlight ? HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE : HIGHLIGHT_TRANSITION_BACKGROUND_COLOR }}
-            transition={ { duration: 0.2 } }>responsive, user-friendly</motion.span>
+            <HighlightSpanComp highlight={highlight}>responsive, user-friendly</HighlightSpanComp>
             {` web applications using modern technologies across both front-end and back-end stacks. I practice writing clean code, implementing intuitive design, and solving real-world problems through development.`}
           </div>
         </div>
