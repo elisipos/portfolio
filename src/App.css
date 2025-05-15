@@ -13,7 +13,7 @@ html {
   position: relative;
 }
 
-.enlarge::after {
+.enlarge-light::after {
   content: '';
   position: absolute;
   bottom: 0%;
@@ -21,6 +21,20 @@ html {
   width: 70%;
   height: 0.1em;
   background-color:  #e5e7eb; /* adjust for theme colors */
+  opacity: 0;
+  transform: scale(0) translate(-50%, 0);
+  transform-origin: left;
+  transition: opacity 200ms, transform 200ms;
+}
+
+.enlarge-dark::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 70%;
+  height: 0.1em;
+  background-color: black; /* adjust for theme colors */
   opacity: 0;
   transform: scale(0) translate(-50%, 0);
   transform-origin: left;

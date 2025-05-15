@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import ProfileComp from './ProfileComp'
 import TechStackComp from './TechStackComp'
 import { ThemeContext } from '../ThemeContext'
-import AboutMe from './AboutMe'
+import AboutMeComp from './AboutMe/AboutMeComp'
 
 const Main = () => {
 
@@ -15,7 +15,7 @@ const Main = () => {
   return (
     <>
       <ProfileComp></ProfileComp>
-      <AboutMe></AboutMe>
+      <AboutMeComp></AboutMeComp>
       <TechStackComp></TechStackComp>
     </>
   )

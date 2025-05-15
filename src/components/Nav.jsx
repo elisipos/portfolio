@@ -10,30 +10,11 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {
-    theme == 'light' ? setTheme('dark') : setTheme('light');
-    if(theme === 'light'){
-      setTheme('dark');
-      localStorage.setItem("theme", 'dark');
-    }else{
-      setTheme('light');
-      localStorage.setItem("theme", 'light')
-    }
-  }
-
-  useEffect(() => {
-    setText(theme + " theme");
-    setPrev(theme + " theme");
-  }, [theme]);
-
-  const handleMouseEnter = () => {
-    setPrev(text);
-    let toggle;
-    theme == 'light' ? toggle = 'dark' : toggle = 'light';
-    setText("change to " + toggle + "?");
-  }
-
-  const handleMouseOut = () => {
-    setText(prev);
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    setText(newTheme + ' theme');
   }
 
   return (
@@ -41,10 +22,10 @@ const Nav = () => {
     {/* Desktop Nav */}
     <div className={`${theme == "light" ? 'text-gray-200 bg-lime-500' : 'text-gray-800 bg-lime-400'} hidden sm:block`}>
       <div className={'flex justify-end p-5 lg:w-10/12'}>
-        <div className='text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge' onClick={() => handleClick()} onMouseOver={() => handleMouseEnter()} onMouseOut={() => handleMouseOut()}>{text}</div>
-        <div className='text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge'>education</div>
-        <div className='text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge'>projects</div>
-        <div className='text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge'>contact</div>
+        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick()}>{text}</div>
+        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`}>education</div>
+        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`}>projects</div>
+        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`}>contact</div>
       </div>
     </div>
 
