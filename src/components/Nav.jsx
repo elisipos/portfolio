@@ -14,8 +14,12 @@ const Nav = () => {
     
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    setText(newTheme + ' theme');
   }
+
+  useEffect(() => {
+    let userTheme = theme;
+    setText(userTheme + ' theme');
+  }, [theme])
 
   return (
     <>

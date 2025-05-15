@@ -9,7 +9,12 @@ const Main = () => {
   const {theme, setTheme} = useContext(ThemeContext);
   
   useEffect(() => {
-    setTheme("light");
+    let userTheme = localStorage.getItem('theme');
+    if(userTheme){
+      setTheme(userTheme);
+    }else{
+      setTheme("light");
+    }
   }, [])
 
   return (
