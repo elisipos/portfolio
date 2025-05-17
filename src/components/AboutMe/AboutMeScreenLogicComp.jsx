@@ -9,7 +9,8 @@ const AboutMeScreenLogicComp = ( {children} ) => {
   return (
     <>
       {/* Large Screen, Click and Hold Component */}
-      <div 
+      <div
+      id="about-me"
       onMouseDown={()=>{setHighlight(!highlight)}}
       onMouseUp={()=>{setHighlight(!highlight)}}
       className="hidden lg:flex justify-center mt-5 w-full max-w-xl mx-auto">
