@@ -22,7 +22,7 @@ const Nav = () => {
 
   const handleClickMobile = (id) => {
     handleClick(id);
-    // setMenuOpen(!menuOpen);
+    // setMenuOpen(!menuOpen); FIX LATER
   }
 
   useEffect(() => {

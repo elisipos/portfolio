@@ -32,7 +32,8 @@ const AboutMeScreenLogicComp = ( {children} ) => {
       </div>
 
       {/* Smaller Screen, Tap Component */}
-      <div 
+      <div
+      id="about-me"
       onClick={()=>{setHighlight(!highlight)}}
       className="flex lg:hidden justify-center mt-5 w-full max-w-xl mx-auto">
         <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex pt-2 p-4 rounded-2xl text-xl text-center max-h-[70vh]`}>
