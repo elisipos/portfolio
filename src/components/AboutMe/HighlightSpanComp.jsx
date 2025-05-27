@@ -10,11 +10,14 @@ const HighlightSpanComp = ({ children, highlight }) => {
 
   return (
     <motion.span
-            style={ { originX: 0} }
-            animate={{ 
-              boxShadow: highlight ? HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE : HIGHLIGHT_TRANSITION_BOX_SHADOW, 
-              backgroundColor: highlight ? HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE : HIGHLIGHT_TRANSITION_BACKGROUND_COLOR }}
-            transition={ { duration: 0.2 } }>{children}</motion.span>
+      style={ { originX: 0} }
+      animate={{ 
+        boxShadow: highlight ? HIGHLIGHT_TRANSITION_BOX_SHADOW_VISIBLE : HIGHLIGHT_TRANSITION_BOX_SHADOW, 
+        backgroundColor: highlight ? HIGHLIGHT_TRANSITION_BACKGROUND_COLOR_VISIBLE : HIGHLIGHT_TRANSITION_BACKGROUND_COLOR }}
+      transition={ { duration: 0.2 } }
+      >
+        {children}
+    </motion.span>
   )
 }
 

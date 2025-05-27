@@ -20,10 +20,12 @@ const Main = () => {
 
   return (
     <>
-      <ProfileComp></ProfileComp>
-      <AboutMeComp></AboutMeComp>
-      <TechStackComp></TechStackComp>
-      <EducationComp></EducationComp>
+      <div className="mb-100">
+        <ProfileComp></ProfileComp>
+        <AboutMeComp></AboutMeComp>
+        <TechStackComp></TechStackComp>
+        <EducationComp></EducationComp>
+      </div>
     </>
   )
 }

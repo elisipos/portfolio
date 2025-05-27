@@ -16,8 +16,8 @@ const ProfileComp = () => {
         </div>
         
         <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'} flex items-center lg:items-start mt-5`}>
-          <div className="ml-5">
-            <div className="text-3xl w-full">Hi, I'm Eli Sipos.</div>
+          <div className="ml-2 md:ml-5">
+            <div className="text-3xl w-full">👋, I'm <span className="font-semibold">Eli Sipos</span>.</div>
             <div className="text-lg w-full">Full Stack Developer</div>
             <div className="text-lg w-full">Wisconsin, USA 🇺🇸</div>
             <div className="ml-5">
