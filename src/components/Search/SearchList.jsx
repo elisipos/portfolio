@@ -289,7 +289,7 @@ const SearchList = ( { input }) => {
     <>
     {displayList.length !== 0 ? (
       <>
-        <SearchListHeader></SearchListHeader>
+        {/* <SearchListHeader></SearchListHeader> */}
           {displayList.map(item => (
             <SearchListElem 
               key={item.id}
