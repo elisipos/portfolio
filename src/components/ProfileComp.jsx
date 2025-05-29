@@ -19,11 +19,10 @@ const ProfileComp = () => {
           <div className="ml-2 md:ml-5">
             <div className="text-3xl w-full">👋, I'm <span className="font-semibold">Eli Sipos</span>.</div>
             <div className="text-lg w-full">Full Stack Developer</div>
-            <div className="text-lg w-full">Wisconsin, USA 🇺🇸</div>
+            <div className="text-lg w-full">Wisconsin, USA</div>
             <div className="ml-5">
               <div className="text-lg w-full">Available for work</div>
-
-              {/* <div className="flex items-center"> */}
+              
               <span className="absolute animate-ping -mx-4 -mt-4.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill={`${theme == 'light' ? 'green' : 'lime'}`} viewBox="0 0 16 16">
                   <circle cx="8" cy="8" r="8"/>
@@ -34,7 +33,7 @@ const ProfileComp = () => {
                   <circle cx="8" cy="8" r="8"/>
                 </svg>
               </span>
-              {/* </div> */}
+
             </div>
 
           </div>
