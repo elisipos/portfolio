@@ -33,14 +33,6 @@ const ProjectTemplate = ({ imageUrl, title, description, tooltip }) => {
           >
           {title}
         </motion.div>
-      {/* <motion.div className={`flex flex-1 flex-col justify-start`} layout>
-        <motion.div 
-          className={`font-bold text-2xl`}
-          layout
-          transition={{ duration: 0.3 }}
-          >
-          {title}
-        </motion.div> */}
 
         <AnimatePresence>
           {isOpen && (
