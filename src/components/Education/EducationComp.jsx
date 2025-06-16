@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ThemeContext } from '../ThemeContext'
-import WesternPic from '../assets/western-technical-college-img.jpg';
+import { ThemeContext } from '../../ThemeContext'
+import WesternPic from '../../assets/western-technical-college-img.jpg';
 
 const EducationComp = () => {
 
@@ -11,7 +11,7 @@ const EducationComp = () => {
       <div className={`${theme == 'light' ? 'bg-black/5' : 'bg-white/10'} flex flex-col justify-center max-w-xl w-full pt-2 p-4 rounded-2xl text-xl max-h-[70vh]`}>
         <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'}`}> 
 
-          <div className="text-center text-xl font-bold py-2">Education</div>
+          <div className="text-center text-xl font-semibold py-2">Education</div>
 
           <div className="flex flex-row items-center justify-center">
 

@@ -3,7 +3,8 @@ import ProfileComp from './Profile/ProfileComp'
 import TechStackComp from './TechStackComp'
 import { ThemeContext } from '../ThemeContext'
 import AboutMeComp from './AboutMe/AboutMeComp'
-import EducationComp from './EducationComp'
+import EducationComp from './Education/EducationComp'
+import ProjectsComp from './Projects/ProjectsComp'
 
 const Main = () => {
 
@@ -25,6 +26,7 @@ const Main = () => {
         <AboutMeComp></AboutMeComp>
         <TechStackComp></TechStackComp>
         <EducationComp></EducationComp>
+        <ProjectsComp></ProjectsComp>
       </div>
     </>
   )
