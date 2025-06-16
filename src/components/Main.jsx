@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import ProfileComp from './ProfileComp'
+import ProfileComp from './Profile/ProfileComp'
 import TechStackComp from './TechStackComp'
 import { ThemeContext } from '../ThemeContext'
 import AboutMeComp from './AboutMe/AboutMeComp'
