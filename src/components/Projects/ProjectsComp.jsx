@@ -5,7 +5,7 @@ import ProjectTemplate from './ProjectTemplate';
 
 const Projects = () => {
 
-  const theme = useContext(ThemeContext);
+  const {theme, setTheme} = useContext(ThemeContext);
 
   return (
     <div id="projects" className="flex justify-center mt-5 w-full max-w-xl mx-auto">
@@ -18,9 +18,10 @@ const Projects = () => {
 
             <ProjectTemplate
             imageUrl={flickFeedImg}
+            link="https://animated-sunshine-e1d49b.netlify.app"
             title="Flick Feed"
             description="Flick Feed is a web app that pulls data from a 3rd party API, The Movie Database, to display a variety of movies and shows to the user, which the user can bookmark shows to watch later."
-            tooltip="The back-end for this project is hosted with a free hosting plan, meaning the server will take up to a minute to spin up upon the first request."
+            tooltip="Free back-end server hosting causes a delay upon first request."
             ></ProjectTemplate>
 
           </div>

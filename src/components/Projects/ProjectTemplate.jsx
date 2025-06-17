@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import {motion, AnimatePresence } from 'framer-motion';
+import LinkIcon from '../Icons/LinkIcon';
+import InfoIcon from '../Icons/InfoIcon';
 
-const ProjectTemplate = ({ imageUrl, title, description, tooltip }) => {
+const ProjectTemplate = ({ imageUrl, link, title, description, tooltip }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,8 +12,6 @@ const ProjectTemplate = ({ imageUrl, title, description, tooltip }) => {
       className="flex flex-row cursor-pointer w-full items-center"
       layout
       onClick={ () => setIsOpen(!isOpen) }
-      whileHover={ { scale: 1.05 } }
-      transition={ { duration: 0.1, ease: "easeInOut"} }
     >
       <motion.div layout>
         <img
@@ -32,6 +32,22 @@ const ProjectTemplate = ({ imageUrl, title, description, tooltip }) => {
           transition={{ duration: 0.3 }}
           >
           {title}
+
+          {
+          isOpen ?
+            <motion.a 
+              href={link} 
+              target="_blank"
+              className="flex items-center ml-2 mt-1"
+              whileHover={{ scale: 1.2 }}
+              transition={{ ease: "easeInOut", duration: 0.1 }}
+            >
+              <LinkIcon />
+            </motion.a>
+          : 
+            null
+          }
+
         </motion.div>
 
         <AnimatePresence>
@@ -48,13 +64,16 @@ const ProjectTemplate = ({ imageUrl, title, description, tooltip }) => {
               </motion.div>
 
               <motion.div
-                className="text-sm italic overflow-hidden"
+                className="text-sm italic overflow-hidden flex"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
               >
-                {tooltip}
+                <span className="mt-1 mr-1.5">
+                  <InfoIcon />
+                </span>
+                  {tooltip}
               </motion.div>
 
             </>

@@ -39,7 +39,7 @@ const Nav = () => {
         <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick('about-me')}>about me</div>
         <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick('tech-stack')}>tech stack</div>
         <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick('education')}>education</div>
-        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick('contact')}>contact</div>
+        <div className={`${theme === "light" ? 'enlarge-light' : 'enlarge-dark'} text-lg md:text-xl px-2 md:px-5 hover:cursor-pointer enlarge`} onClick={() => handleClick('projects')}>projects</div>
       </div>
     </div>
 
@@ -69,7 +69,7 @@ const Nav = () => {
             <div className="hover:cursor-pointer text-xl" onClick={() => handleClickMobile('about-me')}>about me</div>
             <div className="hover:cursor-pointer text-xl" onClick={() => handleClickMobile('tech-stack')}>tech stack</div>
             <div className="hover:cursor-pointer text-xl" onClick={() => handleClickMobile('education')}>education</div>
-            <div className="hover:cursor-pointer text-xl" onClick={() => handleClickMobile('contact')}>contact</div>
+            <div className="hover:cursor-pointer text-xl" onClick={() => handleClickMobile('projects')}>projects</div>
           </div>
         </motion.div>
       )}
