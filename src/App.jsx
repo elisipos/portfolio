@@ -6,7 +6,7 @@ import Main from './components/Main';
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const style = document.documentElement.style;
 

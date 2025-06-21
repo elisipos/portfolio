@@ -15,7 +15,7 @@ const Main = () => {
     if(userTheme){
       setTheme(userTheme);
     }else{
-      setTheme("light");
+      setTheme("dark");
     }
   }, [])
 

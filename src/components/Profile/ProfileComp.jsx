@@ -5,6 +5,7 @@ import WaveHoverWrapper from './WaveHoverWrapper';
 import { motion } from "framer-motion"
 import GitHubIcon from '../Icons/GitHubIcon';
 import ScaleHoverWrapper from './ScaleHoverWrapper';
+import LinkedInIcon from '../Icons/LinkedInIcon';
 
 const ProfileComp = () => {
 
@@ -25,10 +26,12 @@ const ProfileComp = () => {
         </div>
         
         <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'} flex items-center lg:items-start mt-5 flex-grow`}>
-          <div className="ml-2 md:ml-5">
+          <div className="ml-2 md:ml-5 flex-grow">
+
             <div className="text-3xl w-full">
               <WaveHoverWrapper className="inline-block cursor-default">👋</WaveHoverWrapper>, I'm <span className="font-semibold">Eli Sipos</span>.
             </div>
+
             <div className="text-lg w-full">Full Stack Developer</div>
             <div className="text-lg w-full">Wisconsin, USA</div>
             <div className="ml-5">
@@ -39,6 +42,7 @@ const ProfileComp = () => {
                   <circle cx="8" cy="8" r="8"/>
                 </svg>
               </span>
+              
               <span className="absolute -mx-4 -mt-4.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill={`${theme == 'light' ? 'green' : 'lime'}`} viewBox="0 0 16 16">
                   <circle cx="8" cy="8" r="8"/>
@@ -46,22 +50,27 @@ const ProfileComp = () => {
               </span>
 
             </div>
-
           </div>
-        </div>
-        
-        <div className="grid grid-cols-2 grid-rows-2 gap-5">
-          <ScaleHoverWrapper
-            className="flex items-center justify-center"
-            onClick={() => openInNewTab('https://github.com/elisipos?tab=repositories')}
-          >
-            <GitHubIcon />
-          </ScaleHoverWrapper>
-          <div className="flex items-center justify-center">Item</div>
-          <div className="flex items-center justify-center">Item</div>
-          <div className="flex items-center justify-center">Item</div>
-        </div>
 
+          <div className="grid grid-cols-2 grid-rows-2 gap-5">
+            <ScaleHoverWrapper
+              className="flex items-center justify-center"
+              onClick={() => openInNewTab('https://github.com/elisipos?tab=repositories')}
+            >
+              <GitHubIcon />
+            </ScaleHoverWrapper>
+            
+            <ScaleHoverWrapper
+              className="flex items-center justify-center"
+              onClick={() => openInNewTab('https://www.linkedin.com/in/eli-sipos-357259366/')}
+            >
+              <LinkedInIcon/>
+            </ScaleHoverWrapper>
+            <div className="flex items-center justify-center">Item</div>
+            <div className="flex items-center justify-center">Item</div>
+          </div>
+
+        </div>
       </div>
     </div>
   )
