@@ -2,10 +2,18 @@ import React, { useContext } from 'react'
 import profileImg from '../../assets/profile-img-crop.jpg';
 import { ThemeContext } from '../../ThemeContext';
 import WaveHoverWrapper from './WaveHoverWrapper';
+import { motion } from "framer-motion"
+import GitHubIcon from '../Icons/GitHubIcon';
+import ScaleHoverWrapper from './ScaleHoverWrapper';
 
 const ProfileComp = () => {
 
   const {theme, setTheme} = useContext(ThemeContext);
+
+  function openInNewTab(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+  }
 
   return (
     <div className="flex justify-center mt-5">
@@ -16,7 +24,7 @@ const ProfileComp = () => {
           </div>
         </div>
         
-        <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'} flex items-center lg:items-start mt-5`}>
+        <div className={`${theme == 'light' ? 'text-black' : 'text-white/80'} flex items-center lg:items-start mt-5 flex-grow`}>
           <div className="ml-2 md:ml-5">
             <div className="text-3xl w-full">
               <WaveHoverWrapper className="inline-block cursor-default">👋</WaveHoverWrapper>, I'm <span className="font-semibold">Eli Sipos</span>.
@@ -41,6 +49,19 @@ const ProfileComp = () => {
 
           </div>
         </div>
+        
+        <div className="grid grid-cols-2 grid-rows-2 gap-5">
+          <ScaleHoverWrapper
+            className="flex items-center justify-center"
+            onClick={() => openInNewTab('https://github.com/elisipos?tab=repositories')}
+          >
+            <GitHubIcon />
+          </ScaleHoverWrapper>
+          <div className="flex items-center justify-center">Item</div>
+          <div className="flex items-center justify-center">Item</div>
+          <div className="flex items-center justify-center">Item</div>
+        </div>
+
       </div>
     </div>
   )
